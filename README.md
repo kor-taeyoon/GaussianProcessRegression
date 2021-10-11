@@ -11,15 +11,19 @@
 
 ## Structure
 
+
 - File Structure
     - data
         - yyyymmd
             - ori
-                - 2d
-                - 3d
+                - 2D
+                - 3D
+            - tar
+                - tar_2D
+                - tar_3D_res
             - pre
-                - 2d
-                - 3d
+                - 2D
+                - 3D
 
 - Data structure
     - 2D
