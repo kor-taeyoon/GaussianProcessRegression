@@ -1,6 +1,6 @@
-data = "C:/Users/kimtaeyoon/Desktop/data"
+data = "C:/Users/kimtaeyoon/Documents/GitHub/GaussianProcessRegression/data/20211012/data"
 mode = "3D"
-target = "i8_1"
+target = "i8_5"
 
 
 

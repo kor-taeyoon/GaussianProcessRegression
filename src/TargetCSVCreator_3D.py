@@ -1,7 +1,7 @@
-x_start = 545
-x_final = 1311
-y_start = 690
-y_final = 958
+x_start = 156
+x_final = 1490
+y_start = 11
+y_final = 846
 step = 10
 
 

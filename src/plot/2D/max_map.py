@@ -8,10 +8,11 @@ from PIL import Image
 fig = plt.figure(figsize=(10, 10))
 #ax = fig.add_subplot(111, projection='3d') # Axe3D object
 
-a1 = np.loadtxt("Z:/HDD1/Data/광운대학교/2021_딥러닝세미나/20210930/data/pre/3D/pre_i8_1_5.csv", delimiter=",", encoding='UTF8')
-a2 = np.loadtxt("Z:/HDD1/Data/광운대학교/2021_딥러닝세미나/20210930/data/pre/3D/pre_i8_2_5.csv", delimiter=",", encoding='UTF8')
-a3 = np.loadtxt("Z:/HDD1/Data/광운대학교/2021_딥러닝세미나/20210930/data/pre/3D/pre_i8_4_5.csv", delimiter=",", encoding='UTF8')
-a4 = np.loadtxt("Z:/HDD1/Data/광운대학교/2021_딥러닝세미나/20210930/data/pre/3D/pre_i8_5_5.csv", delimiter=",", encoding='UTF8')
+a1 = np.loadtxt("C:/Users/kimtaeyoon/Documents/GitHub/GaussianProcessRegression/data/20211012/data/pre/3D/pre_i8_1.csv", delimiter=",", encoding='UTF8')
+a2 = np.loadtxt("C:/Users/kimtaeyoon/Documents/GitHub/GaussianProcessRegression/data/20211012/data/pre/3D/pre_i8_2.csv", delimiter=",", encoding='UTF8')
+a3 = np.loadtxt("C:/Users/kimtaeyoon/Documents/GitHub/GaussianProcessRegression/data/20211012/data/pre/3D/pre_i8_3.csv", delimiter=",", encoding='UTF8')
+a4 = np.loadtxt("C:/Users/kimtaeyoon/Documents/GitHub/GaussianProcessRegression/data/20211012/data/pre/3D/pre_i8_4.csv", delimiter=",", encoding='UTF8')
+a5 = np.loadtxt("C:/Users/kimtaeyoon/Documents/GitHub/GaussianProcessRegression/data/20211012/data/pre/3D/pre_i8_5.csv", delimiter=",", encoding='UTF8')
 
 
 
@@ -31,16 +32,19 @@ _X1 = np.array([])
 _X2 = np.array([])
 _X3 = np.array([])
 _X4 = np.array([])
+_X5 = np.array([])
 
 _Y1 = np.array([])
 _Y2 = np.array([])
 _Y3 = np.array([])
 _Y4 = np.array([])
+_Y5 = np.array([])
 
 _Z1 = np.array([])
 _Z2 = np.array([])
 _Z3 = np.array([])
 _Z4 = np.array([])
+_Z5 = np.array([])
 
 for temp in a1:
     _X1 = np.append(_X1, temp[0])
@@ -59,13 +63,17 @@ for temp in a4:
     _X4 = np.append(_X4, temp[0])
     _Y4 = np.append(_Y4, temp[1])
     _Z4 = np.append(_Z4, temp[2])
+for temp in a5:
+    _X5 = np.append(_X5, temp[0])
+    _Y5 = np.append(_Y5, temp[1])
+    _Z5 = np.append(_Z5, temp[2])
 
 
 i = 0
 idx=0
 for i in range(0,height):
     for j in range(0,width):
-        tmax = max(_Z1[idx], _Z2[idx], _Z3[idx], _Z4[idx])
+        tmax = max(_Z1[idx], _Z2[idx], _Z3[idx], _Z4[idx], _Z5[idx])
         #print(tmax)
         if(tmax == _Z1[idx]):
             color = (0,0,0)
@@ -75,6 +83,8 @@ for i in range(0,height):
             color = (0,200,0)
         if(tmax == _Z4[idx]):
             color = (200,0,0)
+        if(tmax == _Z5[idx]):
+            color = (100,100,100)
         im[j,i] = color
 
         idx+=1

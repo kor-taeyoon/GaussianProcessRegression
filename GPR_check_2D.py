@@ -1,6 +1,6 @@
-data = "C:/Users/kimtaeyoon/Desktop/data"
+data = "C:/Users/kimtaeyoon/Documents/GitHub/GaussianProcessRegression/data/20211012/data"
 mode = "2D"
-target = "i8_1"
+target = "i8_all"
 
 
 
@@ -33,5 +33,5 @@ for temp in a2:
 plt.errorbar(_X1, _Z1, 1, label='origin')
 plt.plot(_X2, _Z2, label='predicted')
 plt.legend()
-plt.title("Device 1 Comparison")
+plt.title("All Device Comparison (i8)")
 plt.show()
